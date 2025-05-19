@@ -1,13 +1,13 @@
 <?php
-$host = 'localhost';
+$host = 'localhost:3307';  // use the port from XAMPP
 $dbname = 'student_db';
 $user = 'root';
-$pass = ''; // or your MySQL password
+$pass = ''; // No password for XAMPP
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    die("Error: Could not connect to the database.");
 }
 ?>
