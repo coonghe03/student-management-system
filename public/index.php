@@ -12,6 +12,7 @@ try {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="../assets/style.css">
     <title>Student List</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; }
